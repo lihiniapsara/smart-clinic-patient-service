@@ -7,4 +7,9 @@ spring:
 
   cloud:
     config:
-      uri: http://localhost:9000
+      uri: ${CONFIG_SERVER_URIS}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_SERVER_URLS}

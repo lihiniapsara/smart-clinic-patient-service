@@ -9,6 +9,9 @@ spring:
     config:
       uri: ${CONFIG_SERVER_URIS}
 
+server:
+  port: 8082   # <-- මෙතන port එක assign කරලා තියෙන්න
+
 eureka:
   client:
     service-url:

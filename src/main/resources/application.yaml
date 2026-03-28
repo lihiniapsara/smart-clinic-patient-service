@@ -13,6 +13,9 @@ server:
   port: 8082   # <-- මෙතන port එක assign කරලා තියෙන්න
 
 eureka:
+  instance:
+    hostname: patient-service-a.platform
+    prefer-ip-address: false
   client:
     service-url:
       defaultZone: http://vm-node-a.platform:9001/eureka/,http://vm-node-b.platform:9001/eureka/,http://vm-node-c.platform:9001/eureka/

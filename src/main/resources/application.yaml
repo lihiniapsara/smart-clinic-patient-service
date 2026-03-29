@@ -18,4 +18,4 @@ eureka:
     prefer-ip-address: false
   client:
     service-url:
-      defaultZone: http://vm-node-a.platform:9001/eureka/,http://vm-node-b.platform:9001/eureka/,http://vm-node-c.platform:9001/eureka/
+      defaultZone: ${EUREKA_SERVER_URLS}

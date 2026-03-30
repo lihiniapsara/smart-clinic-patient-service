@@ -7,7 +7,7 @@ spring:
 
   cloud:
     config:
-      uri: ${CONFIG_SERVER_URIS}
+        uri: ${CONFIG_SERVER_URIS:http://config.platform:9000}
 
 server:
   port: 8082   # <-- මෙතන port එක assign කරලා තියෙන්න
@@ -19,4 +19,4 @@ eureka:
     prefer-ip-address: false
   client:
     service-url:
-      defaultZone: ${EUREKA_SERVER_URLS}
+      defaultZone: ${EUREKA_SERVER_URLS:http://vm-node-a.platform:9001/eureka/,http://vm-node-b.platform:9001/eureka/,http://vm-node-c.platform:9001/eureka/}

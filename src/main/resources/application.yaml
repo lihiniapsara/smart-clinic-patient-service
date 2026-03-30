@@ -14,7 +14,8 @@ server:
 
 eureka:
   instance:
-    hostname: patient-service-a.platform
+    hostname: ${HOSTNAME}
+    instance-id: ${spring.application.name}:${HOSTNAME}:${server.port}
     prefer-ip-address: false
   client:
     service-url:
